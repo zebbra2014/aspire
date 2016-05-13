@@ -1,0 +1,22 @@
+[Unit]
+Description=Aspire's distributed currency daemon
+After=network.target
+
+[Service]
+User=aspire
+Group=aspire
+
+Type=forking
+PIDFile=/var/lib/aspired/aspired.pid
+ExecStart=/usr/bin/aspired -daemon -pid=/var/lib/aspired/aspired.pid \
+-conf=/etc/aspire/aspire.conf -datadir=/var/lib/aspired -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

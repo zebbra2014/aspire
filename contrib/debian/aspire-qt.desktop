@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Aspire
+Comment=Aspire P2P Cryptocurrency
+Comment[fr]=Aspire, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Aspire, eşten eşe kriptografik sanal para birimi
+Exec=aspire-qt %u
+Terminal=false
+Type=Application
+Icon=aspire128
+MimeType=x-scheme-handler/aspire;
+Categories=Office;Finance;
